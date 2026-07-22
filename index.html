@@ -1,0 +1,3038 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="City Internet — Ultra-fast fiber optic internet in your city. Plans from ৳500/month. Free installation. 300+ happy customers. XPON technology.">
+<meta name="keywords" content="internet, fiber, ISP, Bangladesh, broadband, City Internet">
+<meta property="og:title" content="City Internet — Ultra Fast Fiber Internet">
+<meta property="og:description" content="Plans from ৳500/month. Free installation. 300+ customers.">
+<meta property="og:type" content="website">
+<title>City Internet — Ultra Fast Fiber Internet</title>
+
+<!-- Preload fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- JSON-LD Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "InternetCafe",
+  "name": "City Internet",
+  "description": "Ultra-fast fiber optic internet provider",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "300"
+  }
+}
+</script>
+
+<style>
+/* ============================================================
+   CITY INTERNET — WORLD CLASS CSS
+   ============================================================ */
+
+/* ── Variables ── */
+:root {
+  --c:       #00e5ff;
+  --c2:      #7c3aed;
+  --c3:      #f59e0b;
+  --c4:      #10b981;
+  --c5:      #f43f5e;
+  --bg:      #04060f;
+  --bg2:     #080d1a;
+  --bg3:     #0c1220;
+  --text:    #e8f0fe;
+  --muted:   rgba(180,200,255,.55);
+  --border:  rgba(255,255,255,.08);
+  --glass:   rgba(255,255,255,.055);
+  --shine:   rgba(255,255,255,.42);
+  --blur:    22px;
+  --r:       20px;
+  --r2:      14px;
+  --r3:      50px;
+  --shadow:  0 24px 64px rgba(0,0,0,.55);
+  --font:    'Plus Jakarta Sans', 'Inter', sans-serif;
+  --mono:    'SF Mono','Fira Code',monospace;
+  --nav-h:   72px;
+}
+
+/* ── Reset ── */
+*,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; font-size:16px; }
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width:100%; display:block; }
+a { text-decoration:none; color:inherit; }
+button { font-family:var(--font); }
+ul { list-style:none; }
+
+/* ── Aurora Background ── */
+.aurora {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.aurora::before {
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(ellipse 80% 60% at 10% 10%, rgba(0,80,255,.28) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 90% 15%, rgba(124,58,237,.22) 0%, transparent 55%),
+    radial-gradient(ellipse 70% 60% at 50% 90%, rgba(0,229,255,.12) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 80% 70%, rgba(244,63,94,.10) 0%, transparent 50%);
+  animation: auroraShift 20s ease-in-out infinite alternate;
+}
+@keyframes auroraShift {
+  0%   { opacity:.9; transform:scale(1) rotate(0deg); }
+  50%  { opacity:1;  transform:scale(1.05) rotate(1deg); }
+  100% { opacity:.9; transform:scale(1) rotate(-1deg); }
+}
+
+/* Noise texture */
+.aurora::after {
+  content:'';
+  position:absolute;
+  inset:0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+  opacity:.4;
+}
+
+/* Grid lines */
+.grid-lines {
+  position:fixed;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  background-image:
+    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+  background-size: 80px 80px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
+}
+
+/* ── Glass Primitives ── */
+.glass {
+  background: var(--glass);
+  backdrop-filter: blur(var(--blur)) saturate(180%) brightness(1.05);
+  -webkit-backdrop-filter: blur(var(--blur)) saturate(180%) brightness(1.05);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  box-shadow:
+    var(--shadow),
+    inset 0 1px 0 var(--shine),
+    inset 0 -1px 0 rgba(0,0,0,.15);
+  position: relative;
+  overflow: hidden;
+}
+.glass::before {
+  content:'';
+  position:absolute;
+  inset:0;
+  background: linear-gradient(135deg,
+    rgba(255,255,255,.10) 0%,
+    rgba(255,255,255,.04) 35%,
+    transparent 65%);
+  pointer-events:none;
+  border-radius:inherit;
+  z-index:0;
+}
+.glass > * { position:relative; z-index:1; }
+
+/* ── Buttons ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 14px 32px;
+  border-radius: var(--r3);
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  transition: all .28s cubic-bezier(.4,0,.2,1);
+  position: relative;
+  overflow: hidden;
+  letter-spacing: .01em;
+}
+.btn::after {
+  content:'';
+  position:absolute;
+  inset:0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.12), transparent);
+  transform: translateX(-100%);
+  transition: transform .55s ease;
+}
+.btn:hover::after { transform: translateX(100%); }
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--c), #006eff);
+  color: #000;
+  box-shadow: 0 0 0 0 rgba(0,229,255,0);
+}
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 48px rgba(0,229,255,.4), 0 0 0 1px rgba(0,229,255,.3);
+}
+.btn-primary:active { transform: translateY(-1px); }
+
+.btn-glass {
+  background: rgba(255,255,255,.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,.18);
+  color: #fff;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.35), 0 8px 24px rgba(0,0,0,.3);
+}
+.btn-glass:hover {
+  background: rgba(255,255,255,.14);
+  border-color: rgba(255,255,255,.35);
+  transform: translateY(-3px);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.45), 0 12px 36px rgba(0,0,0,.4);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1.5px solid rgba(255,255,255,.25);
+  color: rgba(255,255,255,.85);
+}
+.btn-outline:hover {
+  border-color: var(--c);
+  color: var(--c);
+  background: rgba(0,229,255,.05);
+  transform: translateY(-3px);
+}
+
+.btn-lg { padding: 17px 42px; font-size: 16px; }
+.btn-sm { padding: 9px 20px; font-size: 13px; }
+
+/* ── Typography ── */
+.display {
+  font-size: clamp(42px, 6vw, 88px);
+  font-weight: 900;
+  line-height: 1.0;
+  letter-spacing: -2px;
+  color: #fff;
+}
+.h1 { font-size: clamp(32px,4.5vw,64px); font-weight: 800; line-height: 1.1; letter-spacing:-1.5px; color:#fff; }
+.h2 { font-size: clamp(26px,3.5vw,48px); font-weight: 700; line-height: 1.15; letter-spacing:-1px; color:#fff; }
+.h3 { font-size: clamp(18px,2vw,26px); font-weight: 600; line-height: 1.3; color:#fff; }
+.h4 { font-size: 18px; font-weight: 600; color: #fff; }
+.body-lg { font-size: 18px; line-height: 1.75; color: var(--muted); }
+.body { font-size: 15px; line-height: 1.7; color: var(--muted); }
+.body-sm { font-size: 13px; line-height: 1.6; color: var(--muted); }
+.label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--c);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--c) 0%, #7c3aed 50%, var(--c) 100%);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradShift 4s linear infinite;
+}
+@keyframes gradShift { 0%{background-position:0%} 100%{background-position:200%} }
+
+/* ── Layout ── */
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+  position: relative;
+  z-index: 1;
+}
+section { position: relative; z-index: 1; }
+
+/* Section header */
+.sec-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: rgba(0,229,255,.08);
+  border: 1px solid rgba(0,229,255,.2);
+  border-radius: var(--r3);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--c);
+  margin-bottom: 20px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.2);
+}
+.sec-label i { font-size: 11px; }
+
+.sec-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+.sec-header p {
+  font-size: 18px;
+  color: var(--muted);
+  max-width: 560px;
+  margin: 16px auto 0;
+  line-height: 1.7;
+}
+
+/* ── NAVBAR ── */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9000;
+  height: var(--nav-h);
+  transition: all .4s cubic-bezier(.4,0,.2,1);
+}
+.nav-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-scrolled {
+  background: rgba(4,6,15,.75);
+  backdrop-filter: blur(28px) saturate(200%);
+  -webkit-backdrop-filter: blur(28px) saturate(200%);
+  border-bottom: 1px solid rgba(255,255,255,.07);
+  box-shadow: 0 8px 40px rgba(0,0,0,.4);
+  height: 64px;
+}
+
+/* Logo */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -.3px;
+}
+.logo-mark {
+  width: 44px; height: 44px;
+  background: linear-gradient(135deg, var(--c), #006eff);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+  color: #000;
+  box-shadow: 0 0 20px rgba(0,229,255,.4), inset 0 1px 0 rgba(255,255,255,.3);
+  flex-shrink: 0;
+}
+.logo-text span { color: var(--c); }
+
+/* Nav links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.nav-links a {
+  padding: 8px 16px;
+  border-radius: var(--r3);
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255,255,255,.7);
+  transition: all .22s;
+}
+.nav-links a:hover {
+  background: rgba(255,255,255,.07);
+  color: #fff;
+}
+
+.nav-cta { display:flex; align-items:center; gap:10px; }
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+}
+.hamburger span {
+  display: block;
+  width: 24px; height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: all .3s;
+}
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Mobile menu */
+.mobile-nav {
+  position: fixed;
+  top: var(--nav-h);
+  left: 12px; right: 12px;
+  z-index: 8999;
+  padding: 16px;
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  border-radius: var(--r);
+}
+.mobile-nav.open { display: flex; }
+.mobile-nav a {
+  padding: 13px 18px;
+  border-radius: var(--r2);
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(255,255,255,.8);
+  transition: all .2s;
+}
+.mobile-nav a:hover {
+  background: rgba(255,255,255,.08);
+  color: #fff;
+}
+.mobile-nav .mob-cta {
+  margin-top: 8px;
+  text-align: center;
+}
+
+/* ── HERO ── */
+#hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: calc(var(--nav-h) + 60px) 0 80px;
+}
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.hero-left { max-width: 620px; }
+
+/* Live indicator */
+.live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 18px;
+  background: rgba(16,185,129,.1);
+  border: 1px solid rgba(16,185,129,.25);
+  border-radius: var(--r3);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--c4);
+  margin-bottom: 28px;
+  box-shadow: 0 0 20px rgba(16,185,129,.1), inset 0 1px 0 rgba(255,255,255,.15);
+}
+.live-dot {
+  width: 8px; height: 8px;
+  background: var(--c4);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(16,185,129,.2);
+  animation: livePulse 2s ease-in-out infinite;
+}
+@keyframes livePulse {
+  0%,100% { box-shadow: 0 0 0 3px rgba(16,185,129,.2); }
+  50%      { box-shadow: 0 0 0 6px rgba(16,185,129,.4); }
+}
+
+.hero-title {
+  font-size: clamp(44px, 5.5vw, 80px);
+  font-weight: 900;
+  line-height: 1.0;
+  letter-spacing: -2.5px;
+  color: #fff;
+  margin-bottom: 24px;
+}
+.hero-title .line2 { color: var(--muted); font-weight: 300; }
+
+.hero-sub {
+  font-size: 18px;
+  line-height: 1.75;
+  color: var(--muted);
+  margin-bottom: 40px;
+  max-width: 500px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 52px;
+}
+
+/* Rating strip */
+.hero-proof {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.hero-avatars {
+  display: flex;
+}
+.hero-avatar {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  border: 2px solid var(--bg);
+  background: linear-gradient(135deg, var(--c), var(--c2));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  margin-left: -8px;
+  flex-shrink: 0;
+}
+.hero-avatar:first-child { margin-left: 0; }
+.proof-text { font-size: 13px; color: var(--muted); line-height: 1.5; }
+.proof-text strong { color: #fff; }
+.stars { color: var(--c3); font-size: 12px; }
+
+/* Hero Right — Glass Dashboard Card */
+.hero-right { position: relative; }
+
+.hero-card-main {
+  padding: 32px;
+  border-radius: 28px;
+}
+.speed-display {
+  text-align: center;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 24px;
+}
+.speed-num {
+  font-size: 80px;
+  font-weight: 900;
+  letter-spacing: -4px;
+  line-height: 1;
+  background: linear-gradient(135deg, var(--c), #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.speed-unit { font-size: 22px; font-weight: 600; color: var(--muted); }
+.speed-label { font-size: 13px; color: var(--muted); margin-top: 4px; letter-spacing:.05em; text-transform:uppercase; }
+
+/* Speed selector */
+.speed-selector {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.speed-opt {
+  padding: 10px 6px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: all .25s;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+}
+.speed-opt:hover { background: rgba(0,229,255,.08); border-color: rgba(0,229,255,.3); color: var(--c); }
+.speed-opt.active {
+  background: rgba(0,229,255,.15);
+  border-color: rgba(0,229,255,.5);
+  color: var(--c);
+  box-shadow: 0 0 16px rgba(0,229,255,.2);
+}
+.speed-opt .opt-speed { font-size: 16px; font-weight: 800; color: inherit; }
+.speed-opt .opt-price { font-size: 11px; color: var(--muted); margin-top: 2px; }
+
+/* Price display */
+.price-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.price-big {
+  font-size: 42px;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -2px;
+}
+.price-big sup { font-size: 20px; letter-spacing: 0; }
+.price-big sub { font-size: 15px; color: var(--muted); font-weight: 400; letter-spacing: 0; }
+.price-badge {
+  padding: 5px 12px;
+  background: rgba(16,185,129,.15);
+  border: 1px solid rgba(16,185,129,.3);
+  border-radius: var(--r3);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--c4);
+}
+
+/* Floating cards */
+.float-card {
+  position: absolute;
+  padding: 14px 18px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 180px;
+  z-index: 10;
+}
+.float-card .fc-icon {
+  width: 38px; height: 38px;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+.float-card .fc-text { font-size: 12px; line-height: 1.5; }
+.float-card .fc-text strong { display: block; color: #fff; font-size: 13px; }
+.fc1 { top: -24px; right: -24px; animation: floatY 4s ease-in-out infinite; }
+.fc2 { bottom: 40px; left: -32px; animation: floatY 5s ease-in-out infinite reverse; }
+.fc3 { bottom: -20px; right: -16px; animation: floatY 3.5s ease-in-out infinite 1s; }
+
+@keyframes floatY {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+/* Ping animation on card */
+.ping-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  position: relative;
+  flex-shrink: 0;
+}
+.ping-dot::after {
+  content:'';
+  position:absolute;
+  inset:-4px;
+  border-radius:50%;
+  animation: ping 1.5s ease-out infinite;
+}
+.ping-green { background: var(--c4); }
+.ping-green::after { background: rgba(16,185,129,.4); }
+@keyframes ping {
+  0% { transform:scale(.8); opacity:.8; }
+  100% { transform:scale(2); opacity:0; }
+}
+
+/* ── TRUST BAR ── */
+#trust {
+  padding: 32px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.trust-inner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.trust-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+  margin-right: 12px;
+}
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid var(--border);
+  border-radius: var(--r3);
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255,255,255,.6);
+  transition: all .2s;
+}
+.trust-item:hover { color: #fff; background: rgba(255,255,255,.07); }
+.trust-item i { color: var(--c); font-size: 14px; }
+.trust-sep { width: 1px; height: 20px; background: var(--border); flex-shrink:0; }
+
+/* ── STATS ── */
+#stats { padding: 100px 0; }
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.stat-card {
+  padding: 36px 28px;
+  text-align: center;
+  border-radius: 24px;
+  transition: transform .3s;
+}
+.stat-card:hover { transform: translateY(-8px); }
+.stat-icon {
+  width: 56px; height: 56px;
+  border-radius: 16px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px;
+  margin: 0 auto 20px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.3);
+}
+.stat-num {
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: -2px;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.stat-card p { font-size: 14px; color: var(--muted); }
+.stat-card .sub-stat {
+  font-size: 12px;
+  color: var(--c);
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+/* ── PACKAGES ── */
+#packages { padding: 100px 0; }
+
+/* Billing toggle */
+.billing-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid var(--border);
+  border-radius: var(--r3);
+  padding: 5px;
+  margin: 0 auto 56px;
+}
+.bt-opt {
+  padding: 8px 22px;
+  border-radius: var(--r3);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all .25s;
+  border: none;
+  background: none;
+  font-family: var(--font);
+}
+.bt-opt.active {
+  background: rgba(0,229,255,.15);
+  border: 1px solid rgba(0,229,255,.35);
+  color: var(--c);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.25);
+}
+.save-tag {
+  background: rgba(16,185,129,.15);
+  border: 1px solid rgba(16,185,129,.3);
+  border-radius: var(--r3);
+  padding: 2px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--c4);
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 48px;
+}
+
+.plan-card {
+  border-radius: 28px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform .35s cubic-bezier(.4,0,.2,1), box-shadow .35s;
+}
+.plan-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 40px 80px rgba(0,0,0,.6), inset 0 1px 0 rgba(255,255,255,.5);
+}
+
+.plan-top {
+  padding: 28px 26px 22px;
+  position: relative;
+}
+.plan-glow {
+  position: absolute;
+  top: -40px; left: 50%;
+  transform: translateX(-50%);
+  width: 180px; height: 80px;
+  border-radius: 50%;
+  filter: blur(24px);
+  opacity: .6;
+}
+.plan-badge {
+  position: absolute;
+  top: 20px; right: 20px;
+  padding: 4px 12px;
+  border-radius: var(--r3);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .05em;
+}
+.plan-icon-wrap {
+  width: 52px; height: 52px;
+  border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px;
+  margin-bottom: 18px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.25);
+}
+.plan-name { font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+.plan-speed { font-size: 44px; font-weight: 900; letter-spacing: -2px; color: #fff; line-height: 1; }
+.plan-speed-unit { font-size: 16px; color: var(--muted); font-weight: 400; }
+.plan-price {
+  margin: 18px 0 0;
+  display: flex; align-items: baseline; gap: 4px;
+}
+.plan-price .amount { font-size: 34px; font-weight: 900; color: #fff; letter-spacing: -1px; }
+.plan-price .taka { font-size: 18px; color: var(--muted); }
+.plan-price .per { font-size: 13px; color: var(--muted); }
+
+.plan-body {
+  padding: 0 26px 28px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.plan-divider { height: 1px; background: var(--border); }
+.plan-features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 0;
+  font-size: 14px;
+  color: rgba(255,255,255,.75);
+  border-bottom: 1px solid rgba(255,255,255,.04);
+}
+.plan-features li:last-child { border-bottom: none; }
+.plan-features li i { font-size: 11px; flex-shrink: 0; }
+.plan-cta { margin-top: auto; }
+.plan-cta .btn { width: 100%; }
+
+/* Popular plan special style */
+.plan-card.popular {
+  border-color: rgba(0,229,255,.35);
+  box-shadow:
+    0 0 0 1px rgba(0,229,255,.15),
+    var(--shadow),
+    inset 0 1px 0 rgba(255,255,255,.5);
+}
+
+/* Perks row below plans */
+.perks-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.perk-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 22px 24px;
+  border-radius: 18px;
+}
+.perk-icon {
+  width: 48px; height: 48px;
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+.perk-text h4 { font-size: 15px; color: #fff; margin-bottom: 3px; }
+.perk-text p { font-size: 13px; color: var(--muted); }
+
+/* ── ONU / EQUIPMENT ── */
+#equipment { padding: 100px 0; }
+.equip-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 64px;
+}
+.onu-card {
+  padding: 32px;
+  border-radius: 28px;
+  transition: transform .3s;
+  position: relative;
+}
+.onu-card:hover { transform: translateY(-10px); }
+.onu-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+.onu-icon-wrap {
+  width: 60px; height: 60px;
+  border-radius: 16px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 26px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.3);
+}
+.onu-tag {
+  padding: 5px 12px;
+  border-radius: var(--r3);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .05em;
+}
+.onu-card h3 { font-size: 22px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+.onu-card .onu-desc { font-size: 14px; color: var(--muted); margin-bottom: 18px; line-height: 1.6; }
+.onu-specs { display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px; }
+.onu-spec {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 13px; color: rgba(255,255,255,.7);
+}
+.onu-spec i { color: var(--c4); font-size: 11px; }
+.onu-price-wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+.onu-price { font-size: 36px; font-weight: 900; color: #fff; letter-spacing: -2px; }
+.onu-price-taka { font-size: 18px; color: var(--muted); }
+
+/* ── ROUTERS ── */
+.router-section { margin-top: 20px; }
+.router-filter {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 36px;
+}
+.rf-btn {
+  padding: 9px 22px;
+  border-radius: var(--r3);
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.04);
+  color: var(--muted);
+  font-family: var(--font);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .25s;
+}
+.rf-btn:hover, .rf-btn.active {
+  background: rgba(0,229,255,.1);
+  border-color: rgba(0,229,255,.35);
+  color: var(--c);
+}
+
+.routers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 18px;
+}
+.router-card {
+  border-radius: 22px;
+  overflow: hidden;
+  transition: transform .3s, box-shadow .3s;
+}
+.router-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 60px rgba(0,0,0,.55);
+}
+.router-img {
+  height: 100px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 44px;
+  position: relative;
+}
+.router-body { padding: 18px; }
+.router-brand {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: var(--r3);
+  display: inline-block;
+  margin-bottom: 8px;
+}
+.router-body h4 { font-size: 16px; color: #fff; margin-bottom: 4px; }
+.router-body .router-sub { font-size: 12px; color: var(--muted); margin-bottom: 12px; }
+.router-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 14px;
+}
+.r-tag {
+  padding: 3px 9px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid var(--border);
+  border-radius: var(--r3);
+  font-size: 10px;
+  color: rgba(255,255,255,.6);
+}
+.r-tag i { font-size: 9px; margin-right: 3px; color: var(--c); }
+.router-price {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--c);
+  text-align: center;
+  padding: 8px;
+  background: rgba(0,229,255,.07);
+  border: 1px solid rgba(0,229,255,.15);
+  border-radius: 10px;
+}
+
+/* ── HOW IT WORKS ── */
+#how { padding: 100px 0; }
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.step-card {
+  padding: 32px 24px;
+  border-radius: 24px;
+  text-align: center;
+  position: relative;
+  transition: transform .3s;
+}
+.step-card:hover { transform: translateY(-8px); }
+.step-connector {
+  position: absolute;
+  top: 48px; right: -40px;
+  width: 56px; height: 2px;
+  background: linear-gradient(90deg, rgba(0,229,255,.3), transparent);
+  z-index: 0;
+}
+.step-num {
+  width: 56px; height: 56px;
+  border-radius: 16px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--c);
+  background: rgba(0,229,255,.1);
+  border: 1px solid rgba(0,229,255,.2);
+  margin: 0 auto 20px;
+  box-shadow: 0 0 24px rgba(0,229,255,.15), inset 0 1px 0 rgba(255,255,255,.2);
+}
+.step-icon {
+  font-size: 32px;
+  color: var(--c);
+  margin-bottom: 16px;
+  display: block;
+}
+.step-card h3 { font-size: 18px; color: #fff; margin-bottom: 10px; }
+.step-card p { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+/* ── TESTIMONIALS ── */
+#testimonials { padding: 100px 0; }
+.testi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.testi-card {
+  padding: 30px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: transform .3s;
+}
+.testi-card:hover { transform: translateY(-8px); }
+.testi-stars { color: var(--c3); font-size: 14px; }
+.testi-text {
+  font-size: 15px;
+  color: rgba(255,255,255,.75);
+  line-height: 1.7;
+  flex: 1;
+}
+.testi-text::before { content: '"'; font-size: 40px; line-height: 0; vertical-align: -.5em; color: var(--c); margin-right: 2px; opacity:.5; }
+.testi-author { display: flex; align-items: center; gap: 14px; }
+.testi-avatar {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.3);
+}
+.testi-info strong { display: block; font-size: 14px; color: #fff; }
+.testi-info span { font-size: 12px; color: var(--muted); }
+.testi-pkg {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 10px;
+  border-radius: var(--r3);
+  font-size: 11px;
+  font-weight: 600;
+  margin-top: 3px;
+}
+
+/* ── FAQ ── */
+#faq { padding: 100px 0; }
+.faq-wrap {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 80px;
+  align-items: start;
+}
+.faq-left h2 { margin-bottom: 16px; }
+.faq-left p { color: var(--muted); line-height: 1.7; margin-bottom: 28px; }
+.faq-list { display: flex; flex-direction: column; gap: 10px; }
+.faq-item {
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all .3s;
+}
+.faq-q {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 22px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(255,255,255,.85);
+  transition: color .2s;
+  gap: 16px;
+}
+.faq-q:hover { color: #fff; }
+.faq-q i {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.07);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px;
+  flex-shrink: 0;
+  transition: all .3s;
+}
+.faq-item.open .faq-q i { transform: rotate(45deg); background: rgba(0,229,255,.15); color: var(--c); }
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .4s cubic-bezier(.4,0,.2,1), padding .3s;
+}
+.faq-a-inner {
+  padding: 0 22px 18px;
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.faq-item.open .faq-a { max-height: 200px; }
+
+/* ── COVERAGE MAP ── */
+#coverage { padding: 100px 0; }
+.coverage-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.coverage-map {
+  border-radius: 28px;
+  overflow: hidden;
+  padding: 32px;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.map-visual {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.map-rings {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+}
+.ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(0,229,255,.2);
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  animation: ringPulse 3s ease-out infinite;
+}
+.ring:nth-child(1) { width:80px; height:80px; animation-delay:0s; }
+.ring:nth-child(2) { width:160px; height:160px; animation-delay:.5s; }
+.ring:nth-child(3) { width:240px; height:240px; animation-delay:1s; }
+.ring:nth-child(4) { width:320px; height:320px; animation-delay:1.5s; }
+@keyframes ringPulse {
+  0% { opacity:.8; }
+  100% { opacity:0; transform:translate(-50%,-50%) scale(1.05); }
+}
+.map-center {
+  width: 48px; height: 48px;
+  background: linear-gradient(135deg, var(--c), #006eff);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+  color: #000;
+  z-index: 2;
+  position: relative;
+  box-shadow: 0 0 40px rgba(0,229,255,.5);
+}
+.map-dot {
+  position: absolute;
+  width: 10px; height: 10px;
+  background: var(--c);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0,229,255,.6);
+}
+.coverage-features { display: flex; flex-direction: column; gap: 16px; }
+.cov-feat {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 22px;
+  border-radius: 16px;
+}
+.cov-feat i { font-size: 22px; flex-shrink: 0; }
+.cov-feat h4 { font-size: 15px; color: #fff; margin-bottom: 3px; }
+.cov-feat p { font-size: 13px; color: var(--muted); }
+
+/* ── FINAL CTA ── */
+#cta-section { padding: 100px 0; }
+.cta-box {
+  border-radius: 36px;
+  padding: 80px 64px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.cta-box::after {
+  content:'';
+  position:absolute;
+  top:50%; left:50%;
+  transform:translate(-50%,-50%);
+  width:600px; height:300px;
+  background: radial-gradient(ellipse, rgba(0,229,255,.12) 0%, transparent 70%);
+  pointer-events:none;
+}
+.cta-box h2 { font-size: clamp(32px,4vw,56px); margin-bottom: 20px; }
+.cta-box p { font-size: 18px; color: var(--muted); max-width: 520px; margin: 0 auto 40px; line-height:1.7; }
+.cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.cta-note { margin-top: 24px; font-size: 13px; color: var(--muted); }
+.cta-note i { color: var(--c4); }
+
+/* ── CONTACT ── */
+#contact { padding: 100px 0; }
+.contact-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 40px;
+  align-items: start;
+}
+.contact-info { display: flex; flex-direction: column; gap: 16px; }
+.contact-head { margin-bottom: 8px; }
+.contact-head h2 { margin-bottom: 12px; }
+.contact-head p { color: var(--muted); line-height: 1.7; }
+.c-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 22px;
+  border-radius: 16px;
+  transition: transform .2s;
+}
+.c-item:hover { transform: translateX(6px); }
+.c-icon {
+  width: 46px; height: 46px;
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.2);
+}
+.c-item h4 { font-size: 14px; color: #fff; margin-bottom: 2px; }
+.c-item p { font-size: 13px; color: var(--muted); }
+
+.contact-form-card { padding: 36px; border-radius: 28px; }
+.form-title { font-size: 22px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+.form-sub { font-size: 14px; color: var(--muted); margin-bottom: 28px; }
+.form-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.g-inp-wrap { position: relative; margin-bottom: 14px; }
+.g-inp-wrap i {
+  position: absolute; left: 16px; top: 50%;
+  transform: translateY(-50%);
+  color: var(--c); font-size: 14px; z-index: 2;
+  pointer-events: none;
+}
+.g-inp-wrap.textarea-wrap i { top: 18px; transform: none; }
+.g-inp-wrap input,
+.g-inp-wrap select,
+.g-inp-wrap textarea {
+  width: 100%;
+  padding: 14px 16px 14px 46px;
+  background: rgba(255,255,255,.055);
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 14px;
+  color: #fff;
+  font-family: var(--font);
+  font-size: 14px;
+  outline: none;
+  transition: all .3s;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.06);
+}
+.g-inp-wrap input::placeholder,
+.g-inp-wrap textarea::placeholder { color: rgba(255,255,255,.28); }
+.g-inp-wrap select option { background: #0d1b3e; }
+.g-inp-wrap input:focus,
+.g-inp-wrap select:focus,
+.g-inp-wrap textarea:focus {
+  border-color: rgba(0,229,255,.45);
+  background: rgba(255,255,255,.08);
+  box-shadow: 0 0 0 4px rgba(0,229,255,.08), inset 0 1px 0 rgba(255,255,255,.1);
+}
+.g-inp-wrap textarea { padding-top: 14px; resize: vertical; }
+
+/* ── FOOTER ── */
+footer {
+  padding: 80px 0 32px;
+  border-top: 1px solid var(--border);
+  position: relative;
+  z-index: 1;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2.2fr 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 60px;
+}
+.footer-brand-col .footer-logo { margin-bottom: 18px; }
+.footer-brand-col p { font-size: 14px; color: var(--muted); line-height: 1.7; max-width: 280px; margin-bottom: 24px; }
+.footer-socials { display: flex; gap: 10px; }
+.social-btn {
+  width: 40px; height: 40px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 15px;
+  color: var(--muted);
+  transition: all .2s;
+}
+.social-btn:hover { background: rgba(0,229,255,.1); border-color: rgba(0,229,255,.3); color: var(--c); }
+.footer-col h5 {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.5);
+  margin-bottom: 20px;
+}
+.footer-col ul li { margin-bottom: 10px; }
+.footer-col ul li a {
+  font-size: 14px;
+  color: var(--muted);
+  transition: color .2s;
+}
+.footer-col ul li a:hover { color: #fff; }
+.footer-col ul li span {
+  font-size: 14px;
+  color: var(--muted);
+}
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--muted);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.footer-bottom a { color: var(--muted); transition: color .2s; }
+.footer-bottom a:hover { color: var(--c); }
+.footer-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: rgba(16,185,129,.08);
+  border: 1px solid rgba(16,185,129,.2);
+  border-radius: var(--r3);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--c4);
+}
+/* Sticky CTA bar on mobile */
+.sticky-cta {
+  display: none;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 8000;
+  padding: 12px 16px;
+  background: rgba(4,6,15,.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid var(--border);
+  gap: 10px;
+}
+
+/* Admin button */
+.admin-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 16px;
+  background: rgba(244,63,94,.1);
+  border: 1px solid rgba(244,63,94,.25);
+  border-radius: var(--r3);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--c5);
+  transition: all .2s;
+}
+.admin-link:hover { background: rgba(244,63,94,.2); }
+
+/* Reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity .65s cubic-bezier(.4,0,.2,1), transform .65s cubic-bezier(.4,0,.2,1);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* Stagger delays */
+.reveal-d1 { transition-delay: .1s; }
+.reveal-d2 { transition-delay: .2s; }
+.reveal-d3 { transition-delay: .3s; }
+.reveal-d4 { transition-delay: .4s; }
+
+/* Responsive */
+@media (max-width:1100px) {
+  .plans-grid { grid-template-columns: repeat(2,1fr); }
+  .stats-grid { grid-template-columns: repeat(2,1fr); }
+  .how-grid { grid-template-columns: repeat(2,1fr); }
+  .testi-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width:900px) {
+  .hero-inner { grid-template-columns:1fr; }
+  .hero-right { display:none; }
+  .faq-wrap { grid-template-columns:1fr; gap:32px; }
+  .coverage-inner { grid-template-columns:1fr; }
+  .contact-wrap { grid-template-columns:1fr; }
+  .equip-grid { grid-template-columns:1fr; }
+  .perks-row { grid-template-columns:1fr; }
+  .wrapper { padding:0 20px; }
+}
+@media (max-width:640px) {
+  .plans-grid { grid-template-columns:1fr; }
+  .stats-grid { grid-template-columns:1fr 1fr; }
+  .testi-grid { grid-template-columns:1fr; }
+  .how-grid { grid-template-columns:1fr 1fr; }
+  .nav-links, .nav-cta { display:none; }
+  .hamburger { display:flex; }
+  .footer-grid { grid-template-columns:1fr; }
+  .form-grid-2 { grid-template-columns:1fr; }
+  .sticky-cta { display:flex; }
+  .cta-box { padding:48px 24px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Aurora -->
+<div class="aurora"></div>
+<div class="grid-lines"></div>
+
+<!-- ═══════════════ NAVBAR ═══════════════ -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <div class="logo-mark"><i class="fas fa-wifi"></i></div>
+      <div class="logo-text">City <span>Internet</span></div>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#packages">Packages</a></li>
+      <li><a href="#equipment">Equipment</a></li>
+      <li><a href="#how">How it Works</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-cta">
+      <a href="admin/login.html" class="admin-link"><i class="fas fa-lock"></i> Admin</a>
+      <a href="#contact" class="btn btn-primary btn-sm">Get Connected</a>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav glass" id="mobileNav">
+  <a href="#packages" onclick="closeMob()">Packages</a>
+  <a href="#equipment" onclick="closeMob()">Equipment</a>
+  <a href="#how" onclick="closeMob()">How it Works</a>
+  <a href="#testimonials" onclick="closeMob()">Reviews</a>
+  <a href="#faq" onclick="closeMob()">FAQ</a>
+  <a href="#contact" onclick="closeMob()">Contact</a>
+  <a href="admin/login.html" onclick="closeMob()">Admin Panel</a>
+  <div class="mob-cta">
+    <a href="#contact" class="btn btn-primary" style="width:100%;justify-content:center" onclick="closeMob()">
+      <i class="fas fa-bolt"></i> Get Connected Now
+    </a>
+  </div>
+</div>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section id="hero">
+  <div class="wrapper">
+    <div class="hero-inner">
+
+      <!-- Left -->
+      <div class="hero-left">
+        <div class="live-badge">
+          <div class="live-dot"></div>
+          Network is Live & Stable
+        </div>
+
+        <h1 class="hero-title">
+          Blazing Fast<br>
+          <span class="gradient-text">Fiber Internet</span><br>
+          <span class="line2">at Your Doorstep</span>
+        </h1>
+
+        <p class="hero-sub">
+          Ultra-fast XPON fiber optic internet starting at just <strong style="color:#fff">৳500/month</strong>.
+          Free installation • 24/7 support • 99.9% uptime guaranteed.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#packages" class="btn btn-primary btn-lg">
+            <i class="fas fa-rocket"></i> View All Plans
+          </a>
+          <a href="#contact" class="btn btn-glass btn-lg">
+            <i class="fas fa-phone"></i> Call Us Free
+          </a>
+        </div>
+
+        <div class="hero-proof">
+          <div class="hero-avatars">
+            <div class="hero-avatar">রা</div>
+            <div class="hero-avatar" style="background:linear-gradient(135deg,#7c3aed,#f43f5e)">কা</div>
+            <div class="hero-avatar" style="background:linear-gradient(135deg,#10b981,#06b6d4)">মো</div>
+            <div class="hero-avatar" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">আ</div>
+            <div class="hero-avatar" style="background:linear-gradient(135deg,#8b5cf6,#ec4899)">স</div>
+          </div>
+          <div class="proof-text">
+            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <strong>4.9/5</strong> from <strong>300+ customers</strong> in your city
+          </div>
+        </div>
+      </div>
+
+      <!-- Right — Interactive Card -->
+      <div class="hero-right">
+        <!-- Floating cards -->
+        <div class="float-card glass fc1">
+          <div class="fc-icon" style="background:rgba(16,185,129,.15);color:var(--c4)"><i class="fas fa-check-circle"></i></div>
+          <div class="fc-text">
+            <strong>Free Installation</strong>
+            No hidden charges
+          </div>
+        </div>
+
+        <div class="float-card glass fc2">
+          <div class="ping-dot ping-green"></div>
+          <div class="fc-text">
+            <strong>Network Online</strong>
+            99.9% uptime
+          </div>
+        </div>
+
+        <div class="float-card glass fc3">
+          <div class="fc-icon" style="background:rgba(245,158,11,.15);color:var(--c3)"><i class="fas fa-headset"></i></div>
+          <div class="fc-text">
+            <strong>24/7 Support</strong>
+            Always available
+          </div>
+        </div>
+
+        <!-- Main card -->
+        <div class="glass hero-card-main">
+          <div class="speed-display">
+            <div class="speed-num" id="heroSpeed">120</div>
+            <div class="speed-unit">Mbps</div>
+            <div class="speed-label">Current Plan Speed</div>
+          </div>
+
+          <div class="speed-selector">
+            <div class="speed-opt" onclick="selectPlan(0,this)">
+              <div class="opt-speed">20</div>
+              <div class="opt-price">৳500</div>
+            </div>
+            <div class="speed-opt" onclick="selectPlan(1,this)">
+              <div class="opt-speed">40</div>
+              <div class="opt-price">৳1000</div>
+            </div>
+            <div class="speed-opt" onclick="selectPlan(2,this)">
+              <div class="opt-speed">80</div>
+              <div class="opt-price">৳1500</div>
+            </div>
+            <div class="speed-opt active" onclick="selectPlan(3,this)">
+              <div class="opt-speed">120</div>
+              <div class="opt-price">৳2100</div>
+            </div>
+          </div>
+
+          <div class="price-row">
+            <div class="price-big"><sup>৳</sup><span id="heroPriceNum">2100</span><sub>/mo</sub></div>
+            <div class="price-badge"><i class="fas fa-check"></i> Free Install</div>
+          </div>
+
+          <a href="#contact" class="btn btn-primary" style="width:100%;justify-content:center">
+            <i class="fas fa-bolt"></i> Get This Plan
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ TRUST BAR ═══════════════ -->
+<section id="trust">
+  <div class="wrapper">
+    <div class="trust-inner">
+      <span class="trust-label">Trusted by</span>
+      <div class="trust-item"><i class="fas fa-users"></i> 300+ Customers</div>
+      <div class="trust-sep"></div>
+      <div class="trust-item"><i class="fas fa-shield-alt"></i> BTRC Licensed</div>
+      <div class="trust-sep"></div>
+      <div class="trust-item"><i class="fas fa-network-wired"></i> XPON Technology</div>
+      <div class="trust-sep"></div>
+      <div class="trust-item"><i class="fas fa-clock"></i> 99.9% Uptime SLA</div>
+      <div class="trust-sep"></div>
+      <div class="trust-item"><i class="fas fa-tools"></i> Free Installation</div>
+      <div class="trust-sep"></div>
+      <div class="trust-item"><i class="fas fa-headset"></i> 24/7 Support</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ STATS ═══════════════ -->
+<section id="stats">
+  <div class="wrapper">
+    <div class="stats-grid">
+      <div class="glass stat-card reveal reveal-d1">
+        <div class="stat-icon" style="background:rgba(0,229,255,.12);border:1px solid rgba(0,229,255,.2);color:var(--c)">
+          <i class="fas fa-users"></i>
+        </div>
+        <div class="stat-num" data-target="300" data-suffix="+">0</div>
+        <p>Happy Customers</p>
+        <div class="sub-stat">And growing every day</div>
+      </div>
+      <div class="glass stat-card reveal reveal-d2">
+        <div class="stat-icon" style="background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.2);color:var(--c4)">
+          <i class="fas fa-signal"></i>
+        </div>
+        <div class="stat-num" data-target="99" data-suffix=".9%">0</div>
+        <p>Network Uptime</p>
+        <div class="sub-stat">Guaranteed SLA</div>
+      </div>
+      <div class="glass stat-card reveal reveal-d3">
+        <div class="stat-icon" style="background:rgba(124,58,237,.12);border:1px solid rgba(124,58,237,.2);color:var(--c2)">
+          <i class="fas fa-bolt"></i>
+        </div>
+        <div class="stat-num" data-target="120" data-suffix="Mbps">0</div>
+        <p>Maximum Speed</p>
+        <div class="sub-stat">Ultra fiber plan</div>
+      </div>
+      <div class="glass stat-card reveal reveal-d4">
+        <div class="stat-icon" style="background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.2);color:var(--c3)">
+          <i class="fas fa-headset"></i>
+        </div>
+        <div class="stat-num" data-target="24" data-suffix="/7">0</div>
+        <p>Customer Support</p>
+        <div class="sub-stat">Always here for you</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ PACKAGES ═══════════════ -->
+<section id="packages">
+  <div class="wrapper">
+    <div class="sec-header">
+      <div class="sec-label"><i class="fas fa-box"></i> Pricing Plans</div>
+      <h2 class="h1">Simple, Transparent Pricing</h2>
+      <p>No hidden fees. No contracts. Cancel anytime. Free installation on all plans.</p>
+    </div>
+
+    <div class="plans-grid">
+
+      <!-- Plan 1 — 20 Mbps -->
+      <div class="glass plan-card reveal reveal-d1">
+        <div class="plan-glow" style="background:#4a90ff"></div>
+        <div class="plan-top">
+          <div class="plan-icon-wrap" style="background:rgba(74,144,255,.15);border:1px solid rgba(74,144,255,.25);color:#4a90ff">
+            <i class="fas fa-wifi"></i>
+          </div>
+          <div class="plan-name">Starter</div>
+          <div class="plan-speed">20 <span class="plan-speed-unit">Mbps</span></div>
+          <div class="plan-price">
+            <span class="taka">৳</span>
+            <span class="amount">500</span>
+            <span class="per">/month</span>
+          </div>
+        </div>
+        <div class="plan-body">
+          <div class="plan-divider"></div>
+          <ul class="plan-features">
+            <li><i class="fas fa-check" style="color:var(--c4)"></i> 20 Mbps Download Speed</li>
+            <li><i class="fas fa-check" style="color:var(--c4)"></i> Unlimited Data</li>
+            <li><i class="fas fa-check" style="color:var(--c4)"></i> Free Installation</li>
+            <li><i class="fas fa-check" style="color:var(--c4)"></i> XPON Fiber Technology</li>
+            <li><i class="fas fa-check" style="color:var(--c4)"></i> 24/7 Support</li>
+            <li><i class="fas fa-times" style="color:var(--muted)"></i> <span style="color:var(--muted)">Priority Support</span></li>
+          </ul>
+          <div class="plan-cta">
+            <a href="#contact" class="btn btn-glass">Get Starter Plan</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Plan 2 — 40 Mbps -->
+      <div class="glass plan-card popular reveal reveal-d2">
+        <div class="plan-glow" style="background:var(--c)"></div>
+        <div class="plan-badge" style="background:rgba(0,229,255,.15);border:1px solid rgba(0,229,255,.3);color:var(--c)">
+          <i class="fas fa-crown"></i> Popular
+        </div>
+        <div class="plan-top">
+          <div class="plan-icon-wrap" style="background:rgba(0,229,255,.15);border:1px solid rgba(0,229,255,.25);color:var(--c)">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <div class="plan-name">Standard</div>
+          <div class="plan-speed">40 <span class="plan-speed-unit">Mbps</span></div>
+          <div class="plan-price">
+            <span class="taka">৳</span>
+            <span class="amount">1000</span>
+            <span class="per">/month</span>
+          </div>
+        </div>
+        <div class="plan-body">
+          <div class="plan-divider"></div>
+          <ul class="plan-features">
+            <li><i class="fas fa-check" style="color:var(--c4)"></i> 40 Mbps Download Speed</li>
+            <li><i class="fas fa-check" style="color:var(--c4)"></i> Unlimited Data</li>
+            <li><i class="fas fa-check" style="color:var(--c4)"></i> Free Installation</li>
+            <li><i class="fas fa-check" style="color:var(--c4)"></i> XPON Fiber Technology</li>
+            <li><i class="fas fa-check" style="color:var(--c4)"></i> 24/7 Priority Support</li>
+            <li><i class="fas fa-check" style="color:var(--c4)"></i> Stable Gaming & Streaming</li>
+          </ul>
+          <div class="plan-cta">
+            <a href="#contact" class="btn btn-primary">Get Standard Plan</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Plan 3 — 80 Mbps -->
+      <div class="glass plan-card reveal reveal-d3">
+        <div class="plan-glow" style="background:var(--c2)"></div>
+        <div class="plan-top">
+          <div class="plan-icon-wrap" style="background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.25);color:var(--c2)">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <div class="plan-name">Premium</div>
+          <div class="plan-speed">80 <span class="plan-speed-unit">Mbps</span></div>
+          <div class="plan-price">
+            <span class="taka">৳</span>
+            <span class="amount">1500</span>
+            <span class="per">/month</span>
+          </div>
+        </div>
+        <div class="plan-body">
+          <div class="plan-divider"></div>
+          <ul class="plan-features">
+            <li><i class="fas fa-check" style="color:var(--c4)"></i> 80 Mbps Download Speed</li>
+            <li><i class="fas fa-check" style="color:var(--c4)"></i> Unlimited Data</li>
+            <li><i class="fas fa-check" style="color:var(--c4)"></i> Free Installation</li>
+            <li><i class="fas fa-check" style="color:var(--c4)"></i> XPON Fiber Technology</li>
+            <li><i class="fas fa-check" style="color:var(--c4)"></i> 24/7 Priority Support</li>
+            <li><i class="fas fa-check" style="color:var(--c4)"></i> 4K Streaming & Gaming</li>
+          </ul>
+          <div class="plan-cta">
+            <a href="#contact" class="btn btn-glass">Get Premium Plan</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Plan 4 — 120 Mbps -->
+      <div class="glass plan-card reveal reveal-d4">
+        <div class="plan-glow" style="background:var(--c3)"></div>
+        <div class="plan-badge" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:var(--c3)">
+          <i class="fas fa-star"></i> Ultra
+        </div>
+        <div class="plan-top">
+          <div class="plan-icon-wrap" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.25);color:var(--c3)">
+            <i class="fas fa-fighter-jet"></i>
+          </div>
+          <div class="plan-name">Ultra</div>
+          <div class="plan-speed">120 <span class="plan-speed-unit">Mbps</span></div>
+          <div class="plan-price">
+            <span class="taka">৳</span>
+            <span class="amount">2100</span>
+            <span class="per">/month</span>
+          </div>
+        </div>
+        <div class="plan-body">
+          <div class="plan-divider"></div>
+          <ul class="plan-features">
+            <li><i class="fas fa-check" style="color:var(--c4)"></i> 120 Mbps Download Speed</li>
+            <li><i class="fas fa-check" style="color:var(--c4)"></i> Unlimited Data</li>
+            <li><i class="fas fa-check" style="color:var(--c4)"></i> Free Installation</li>
+            <li><i class="fas fa-check" style="color:var(--c4)"></i> XPON Fiber Technology</li>
+            <li><i class="fas fa-check" style="color:var(--c4)"></i> 24/7 VIP Support</li>
+            <li><i class="fas fa-check" style="color:var(--c4)"></i> Business-grade Speed</li>
+          </ul>
+          <div class="plan-cta">
+            <a href="#contact" class="btn btn-glass">Get Ultra Plan</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Perks -->
+    <div class="perks-row">
+      <div class="glass perk-card reveal reveal-d1">
+        <div class="perk-icon" style="background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.2);color:var(--c4)">
+          <i class="fas fa-tools"></i>
+        </div>
+        <div class="perk-text">
+          <h4>Free Installation</h4>
+          <p>We come to you. Free setup & configuration included on all plans. Extra cable charged only if distance is very long.</p>
+        </div>
+      </div>
+      <div class="glass perk-card reveal reveal-d2">
+        <div class="perk-icon" style="background:rgba(0,229,255,.12);border:1px solid rgba(0,229,255,.2);color:var(--c)">
+          <i class="fas fa-network-wired"></i>
+        </div>
+        <div class="perk-text">
+          <h4>XPON Fiber Technology</h4>
+          <p>All connections use XPON technology — compatible with both EPON and GPON standards for maximum performance.</p>
+        </div>
+      </div>
+      <div class="glass perk-card reveal reveal-d3">
+        <div class="perk-icon" style="background:rgba(124,58,237,.12);border:1px solid rgba(124,58,237,.2);color:var(--c2)">
+          <i class="fas fa-headset"></i>
+        </div>
+        <div class="perk-text">
+          <h4>Round-the-Clock Support</h4>
+          <p>Our technical team is available 24 hours a day, 7 days a week. Call, WhatsApp, or walk in anytime.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ EQUIPMENT ═══════════════ -->
+<section id="equipment">
+  <div class="wrapper">
+    <div class="sec-header">
+      <div class="sec-label"><i class="fas fa-network-wired"></i> Equipment</div>
+      <h2 class="h1">ONU & Router Devices</h2>
+      <p>We supply and support the best networking equipment available in the market.</p>
+    </div>
+
+    <!-- ONU Cards -->
+    <div class="equip-grid">
+
+      <div class="glass onu-card reveal reveal-d1">
+        <div class="onu-top">
+          <div class="onu-icon-wrap" style="background:rgba(0,229,255,.12);border:1px solid rgba(0,229,255,.25);color:var(--c)">
+            <i class="fas fa-network-wired"></i>
+          </div>
+          <div class="onu-tag" style="background:rgba(0,229,255,.1);border:1px solid rgba(0,229,255,.25);color:var(--c)">XPON</div>
+        </div>
+        <h3>DBC ONU</h3>
+        <p class="onu-desc">Entry-level XPON optical network unit. Perfect for home users on basic and standard internet plans.</p>
+        <div class="onu-specs">
+          <div class="onu-spec"><i class="fas fa-check-circle"></i> XPON (EPON / GPON)</div>
+          <div class="onu-spec"><i class="fas fa-check-circle"></i> Gigabit Speed</div>
+          <div class="onu-spec"><i class="fas fa-check-circle"></i> 1× LAN Port</div>
+          <div class="onu-spec"><i class="fas fa-check-circle"></i> Fully Network Compatible</div>
+        </div>
+        <div class="onu-price-wrap">
+          <div class="onu-price-taka">৳</div>
+          <div class="onu-price">650</div>
+        </div>
+      </div>
+
+      <div class="glass onu-card reveal reveal-d2" style="border-color:rgba(124,58,237,.3)">
+        <div class="onu-top">
+          <div class="onu-icon-wrap" style="background:rgba(124,58,237,.12);border:1px solid rgba(124,58,237,.25);color:var(--c2)">
+            <i class="fas fa-network-wired"></i>
+          </div>
+          <div class="onu-tag" style="background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.25);color:var(--c2)">XPON</div>
+        </div>
+        <h3>VSOL ONU</h3>
+        <p class="onu-desc">Mid-range XPON ONU with enhanced performance. Recommended for premium and ultra plans.</p>
+        <div class="onu-specs">
+          <div class="onu-spec"><i class="fas fa-check-circle"></i> XPON (EPON / GPON)</div>
+          <div class="onu-spec"><i class="fas fa-check-circle"></i> Gigabit Speed</div>
+          <div class="onu-spec"><i class="fas fa-check-circle"></i> 1× LAN Port</div>
+          <div class="onu-spec"><i class="fas fa-check-circle"></i> Fully Network Compatible</div>
+        </div>
+        <div class="onu-price-wrap">
+          <div class="onu-price-taka">৳</div>
+          <div class="onu-price">1050</div>
+        </div>
+      </div>
+
+      <div class="glass onu-card reveal reveal-d3" style="border-color:rgba(245,158,11,.3)">
+        <div class="onu-top">
+          <div class="onu-icon-wrap" style="background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.25);color:var(--c3)">
+            <i class="fas fa-network-wired"></i>
+          </div>
+          <div class="onu-tag" style="background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.25);color:var(--c3)">XPON</div>
+        </div>
+        <h3>CData ONU</h3>
+        <p class="onu-desc">High-performance XPON ONU for ultra-speed plans and business-grade connections requiring maximum stability.</p>
+        <div class="onu-specs">
+          <div class="onu-spec"><i class="fas fa-check-circle"></i> XPON (EPON / GPON)</div>
+          <div class="onu-spec"><i class="fas fa-check-circle"></i> Gigabit Speed</div>
+          <div class="onu-spec"><i class="fas fa-check-circle"></i> 1× LAN Port</div>
+          <div class="onu-spec"><i class="fas fa-check-circle"></i> Fully Network Compatible</div>
+        </div>
+        <div class="onu-price-wrap">
+          <div class="onu-price-taka">৳</div>
+          <div class="onu-price">1100</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Routers -->
+    <div class="router-section">
+      <div class="sec-header" style="margin-bottom:32px">
+        <div class="sec-label"><i class="fas fa-router"></i> Routers</div>
+        <h2 class="h2">Available Router Models</h2>
+      </div>
+
+      <div class="router-filter">
+        <button class="rf-btn active" onclick="filterR('all',this)">All Routers</button>
+        <button class="rf-btn" onclick="filterR('tplink',this)">TP-Link</button>
+        <button class="rf-btn" onclick="filterR('cudy',this)">Cudy</button>
+        <button class="rf-btn" onclick="filterR('mercusys',this)">Mercusys</button>
+        <button class="rf-btn" onclick="filterR('other',this)">Other Brands</button>
+      </div>
+
+      <div class="routers-grid" id="routersGrid">
+
+        <!-- TP-Link -->
+        <div class="glass router-card" data-brand="tplink">
+          <div class="router-img" style="background:linear-gradient(135deg,rgba(74,144,255,.15),rgba(0,229,255,.08))">
+            <i class="fas fa-router" style="color:#4a90ff"></i>
+          </div>
+          <div class="router-body">
+            <span class="router-brand" style="background:rgba(74,144,255,.12);color:#7ab8ff">TP-Link</span>
+            <h4>Archer C64</h4>
+            <p class="router-sub">AC1200 Dual Band WiFi Router</p>
+            <div class="router-tags">
+              <span class="r-tag"><i class="fas fa-wifi"></i>1200 Mbps</span>
+              <span class="r-tag"><i class="fas fa-layer-group"></i>Dual Band</span>
+              <span class="r-tag"><i class="fas fa-plug"></i>4× LAN</span>
+              <span class="r-tag">802.11ac</span>
+            </div>
+            <div class="router-price">
+    <a href="https://www.startech.com.bd/tp-link-archer-c64-ac1200-wifi-router?srsltid=AfmBOopp8Nj27XfhYDS-yQzaEulSgq0GyTsHNqOhPefODrKVB5p3rboS"
+       target="_blank">
+        🔍 Check Latest Price
+    </a>
+          </div>
+         
+</div>
+        </div>
+
+        <div class="glass router-card" data-brand="tplink">
+          <div class="router-img" style="background:linear-gradient(135deg,rgba(74,144,255,.15),rgba(0,229,255,.08))">
+            <i class="fas fa-router" style="color:#4a90ff"></i>
+          </div>
+          <div class="router-body">
+            <span class="router-brand" style="background:rgba(74,144,255,.12);color:#7ab8ff">TP-Link</span>
+            <h4>Archer C54</h4>
+            <p class="router-sub">AC1200 Dual Band WiFi Router</p>
+            <div class="router-tags">
+              <span class="r-tag"><i class="fas fa-wifi"></i>1200 Mbps</span>
+              <span class="r-tag"><i class="fas fa-layer-group"></i>Dual Band</span>
+              <span class="r-tag"><i class="fas fa-plug"></i>4× LAN</span>
+              <span class="r-tag">802.11ac</span>
+            </div>
+             <div class="router-price">
+    <a href="https://www.startech.com.bd/tp-link-archer-c54-ac1200-dual-band-mu-mimo-beamforming-wi-fi-router?srsltid=AfmBOorfBiCqAXWhFznft9WGXdIsb1tKvVdqD1hBn9zUxMViSpS-1trQ"
+       target="_blank">
+        🔍 Check Latest Price
+    </a>
+          </div>
+          </div>
+        </div>
+
+        <div class="glass router-card" data-brand="tplink">
+          <div class="router-img" style="background:linear-gradient(135deg,rgba(74,144,255,.15),rgba(0,229,255,.08))">
+            <i class="fas fa-router" style="color:#4a90ff"></i>
+          </div>
+          <div class="router-body">
+            <span class="router-brand" style="background:rgba(74,144,255,.12);color:#7ab8ff">TP-Link</span>
+            <h4>Archer C6 V4</h4>
+            <p class="router-sub">AC1200 Dual Band Gigabit Router</p>
+            <div class="router-tags">
+              <span class="r-tag"><i class="fas fa-wifi"></i>1200 Mbps</span>
+              <span class="r-tag"><i class="fas fa-layer-group"></i>Dual Band</span>
+              <span class="r-tag">Gigabit LAN</span>
+              <span class="r-tag">MU-MIMO</span>
+            </div>
+             <div class="router-price">
+    <a href="https://www.startech.com.bd/tp-link-archer-c6-ac1200-gigabit-router?srsltid=AfmBOorp90QxfcUk0W4kfycGQ6vZPtshcQS8O4vSiYA-IGIJitkclHem"
+       target="_blank">
+        🔍 Check Latest Price
+    </a>
+          </div>
+          </div>
+        </div>
+
+        <div class="glass router-card" data-brand="tplink">
+          <div class="router-img" style="background:linear-gradient(135deg,rgba(74,144,255,.15),rgba(0,229,255,.08))">
+            <i class="fas fa-router" style="color:#4a90ff"></i>
+          </div>
+          <div class="router-body">
+            <span class="router-brand" style="background:rgba(74,144,255,.12);color:#7ab8ff">TP-Link</span>
+            <h4>Archer C80</h4>
+            <p class="router-sub">AC1900 Dual Band WiFi Router</p>
+            <div class="router-tags">
+              <span class="r-tag"><i class="fas fa-wifi"></i>1900 Mbps</span>
+              <span class="r-tag"><i class="fas fa-layer-group"></i>Dual Band</span>
+              <span class="r-tag">MU-MIMO 3×3</span>
+            </div>
+             <div class="router-price">
+    <a href="https://www.startech.com.bd/tp-link-archer-c80-ac1900-gigabit-mu-mimo-router?srsltid=AfmBOoqoXCwHdZdAnTccK0svwOS3uKf2GqPw11iFb91OVpVJ_bC8V3Ed"
+       target="_blank">
+        🔍 Check Latest Price
+    </a>
+          </div>
+          </div>
+        </div>
+
+        <div class="glass router-card" data-brand="tplink">
+          <div class="router-img" style="background:linear-gradient(135deg,rgba(0,229,255,.15),rgba(74,144,255,.08))">
+            <i class="fas fa-router" style="color:var(--c)"></i>
+          </div>
+          <div class="router-body">
+            <span class="router-brand" style="background:rgba(74,144,255,.12);color:#7ab8ff">TP-Link</span>
+            <h4>Archer AX12</h4>
+            <p class="router-sub">AX1500 Dual Band WiFi 6 Router</p>
+            <div class="router-tags">
+              <span class="r-tag"><i class="fas fa-bolt"></i>WiFi 6</span>
+              <span class="r-tag"><i class="fas fa-wifi"></i>1500 Mbps</span>
+              <span class="r-tag">OFDMA</span>
+            </div>
+             <div class="router-price">
+    <a href="https://www.startech.com.bd/tp-link-archer-ax12-ax1500-router?srsltid=AfmBOopwiGdSxfavmEGj4Ou2kNY609Ay-ST12EtC8nLTzps1CDaYzTdc"
+       target="_blank">
+        🔍 Check Latest Price
+    </a>
+          </div>
+          </div>
+        </div>
+
+        <div class="glass router-card" data-brand="tplink">
+          <div class="router-img" style="background:linear-gradient(135deg,rgba(74,144,255,.15),rgba(0,229,255,.08))">
+            <i class="fas fa-broadcast-tower" style="color:#4a90ff"></i>
+          </div>
+          <div class="router-body">
+            <span class="router-brand" style="background:rgba(74,144,255,.12);color:#7ab8ff">TP-Link</span>
+            <h4>Deco E4</h4>
+            <p class="router-sub">AC1200 Whole Home Mesh WiFi</p>
+            <div class="router-tags">
+              <span class="r-tag"><i class="fas fa-home"></i>Mesh</span>
+              <span class="r-tag">1200 Mbps</span>
+              <span class="r-tag">1200 sq ft</span>
+            </div>
+             <div class="router-price">
+    <a href="https://www.startech.com.bd/tp-link-deco-e4-dual-band-router?srsltid=AfmBOoojKpwLRLENAdMWjaZMV0Tb7MDE3zSACg8iX3F2VXdWej4uMVCw"
+       target="_blank">
+        🔍 Check Latest Price
+    </a>
+          </div>
+          </div>
+        </div>
+
+        <div class="glass router-card" data-brand="tplink">
+          <div class="router-img" style="background:linear-gradient(135deg,rgba(74,144,255,.15),rgba(0,229,255,.08))">
+            <i class="fas fa-broadcast-tower" style="color:#4a90ff"></i>
+          </div>
+          <div class="router-body">
+            <span class="router-brand" style="background:rgba(74,144,255,.12);color:#7ab8ff">TP-Link</span>
+            <h4>Deco M4</h4>
+            <p class="router-sub">AC1200 Whole Home Mesh WiFi</p>
+            <div class="router-tags">
+              <span class="r-tag"><i class="fas fa-home"></i>Mesh</span>
+              <span class="r-tag">1200 Mbps</span>
+              <span class="r-tag">1500 sq ft</span>
+            </div>
+             <div class="router-price">
+    <a href="https://www.startech.com.bd/tplink-deco-m4-router?srsltid=AfmBOoqUuY1P-rfCdSrY_ZoWCxrBJAwHFMKceK8lxEWoQTGJP9lpYdbO"
+       target="_blank">
+        🔍 Check Latest Price
+    </a>
+          </div>
+          </div>
+        </div>
+
+        <div class="glass router-card" data-brand="tplink">
+          <div class="router-img" style="background:linear-gradient(135deg,rgba(0,229,255,.15),rgba(74,144,255,.08))">
+            <i class="fas fa-broadcast-tower" style="color:var(--c)"></i>
+          </div>
+          <div class="router-body">
+            <span class="router-brand" style="background:rgba(74,144,255,.12);color:#7ab8ff">TP-Link</span>
+            <h4>Deco X10</h4>
+            <p class="router-sub">AX1500 WiFi 6 Mesh System</p>
+            <div class="router-tags">
+              <span class="r-tag"><i class="fas fa-bolt"></i>WiFi 6</span>
+              <span class="r-tag"><i class="fas fa-home"></i>Mesh</span>
+              <span class="r-tag">1500 sq ft</span>
+            </div>
+             <div class="router-price">
+    <a href="https://www.startech.com.bd/tp-link-deco-x10-wifi-6-mesh-router?srsltid=AfmBOooxMmKbu2VrSUJqW5kugPYU60ouXfg09sIWDV9N1BGknfiyhw-1"
+       target="_blank">
+        🔍 Check Latest Price
+    </a>
+          </div>
+          </div>
+        </div>
+
+        <!-- Cudy -->
+        <div class="glass router-card" data-brand="cudy">
+          <div class="router-img" style="background:linear-gradient(135deg,rgba(244,63,94,.15),rgba(124,58,237,.08))">
+            <i class="fas fa-router" style="color:var(--c5)"></i>
+          </div>
+          <div class="router-body">
+            <span class="router-brand" style="background:rgba(244,63,94,.12);color:#ff8fa3">Cudy</span>
+            <h4>WR1500</h4>
+            <p class="router-sub">AX1500 Dual Band WiFi 6 Router</p>
+            <div class="router-tags">
+              <span class="r-tag"><i class="fas fa-bolt"></i>WiFi 6</span>
+              <span class="r-tag">1500 Mbps</span>
+              <span class="r-tag">Gigabit</span>
+            </div>
+            <div class="router-price">
+    <a href="https://www.startech.com.bd/cudy-wr1500-ax1500-wi-fi-6-mesh-router?srsltid=AfmBOorpHROAil_yZeMF9hzsvnjV9DbxpYxSqL5Il6RV9b-wPf5xVRbH"
+       target="_blank">
+        🔍 Check Latest Price
+    </a>
+          </div>
+          </div>
+        </div>
+
+        <div class="glass router-card" data-brand="cudy">
+          <div class="router-img" style="background:linear-gradient(135deg,rgba(244,63,94,.15),rgba(124,58,237,.08))">
+            <i class="fas fa-router" style="color:var(--c5)"></i>
+          </div>
+          <div class="router-body">
+            <span class="router-brand" style="background:rgba(244,63,94,.12);color:#ff8fa3">Cudy</span>
+            <h4>WR3000</h4>
+            <p class="router-sub">AX3000 Gigabit Dual Band WiFi 6</p>
+            <div class="router-tags">
+              <span class="r-tag"><i class="fas fa-bolt"></i>WiFi 6</span>
+              <span class="r-tag">3000 Mbps</span>
+              <span class="r-tag">Smart</span>
+            </div>
+            <div class="router-price">
+    <a href="https://www.startech.com.bd/cudy-wr3000-ax3000-gigabit-wi-fi-6-router?srsltid=AfmBOoocuKFe3N__INUpFEkIpPIPs8pa7yXgiOkQhnzFSSdM1_piBMB_"
+       target="_blank">
+        🔍 Check Latest Price
+    </a>
+          </div>
+          </div>
+        </div>
+
+        <div class="glass router-card" data-brand="cudy">
+          <div class="router-img" style="background:linear-gradient(135deg,rgba(244,63,94,.15),rgba(124,58,237,.08))">
+            <i class="fas fa-router" style="color:var(--c5)"></i>
+          </div>
+          <div class="router-body">
+            <span class="router-brand" style="background:rgba(244,63,94,.12);color:#ff8fa3">Cudy</span>
+            <h4>WR3600</h4>
+            <p class="router-sub">BE3600 Gigabit WiFi 7 Router</p>
+            <div class="router-tags">
+              <span class="r-tag"><i class="fas fa-star"></i>WiFi 7</span>
+              <span class="r-tag">3600 Mbps</span>
+              <span class="r-tag">Tri-Band</span>
+            </div>
+             <div class="router-price">
+    <a href="https://www.startech.com.bd/cudy-wr3600-be3600-router?srsltid=AfmBOooHgqO4RyACWFOuJQ40o0VjhdP6okJytBRws48tELMLXTCcMQwj"
+       target="_blank">
+        🔍 Check Latest Price
+    </a>
+          </div>
+          </div>
+        </div>
+
+        <!-- Mercusys -->
+        <div class="glass router-card" data-brand="mercusys">
+          <div class="router-img" style="background:linear-gradient(135deg,rgba(16,185,129,.15),rgba(6,182,212,.08))">
+            <i class="fas fa-router" style="color:var(--c4)"></i>
+          </div>
+          <div class="router-body">
+            <span class="router-brand" style="background:rgba(16,185,129,.12);color:#6ee7b7">Mercusys</span>
+            <h4>MR30G</h4>
+            <p class="router-sub">AC1200 Dual Band Gigabit Router</p>
+            <div class="router-tags">
+              <span class="r-tag">1200 Mbps</span>
+              <span class="r-tag">3× Gigabit</span>
+              <span class="r-tag">802.11ac</span>
+            </div>
+             <div class="router-price">
+    <a href="https://www.startech.com.bd/mercusys-mr30g-ac1200-wireless-dual-band-gigabit-router?srsltid=AfmBOorgXQxuARhqjl8O-ICawAvq9Clzw3awVZxlKyQnA1ZqXql_f4CB"
+       target="_blank">
+        🔍 Check Latest Price
+    </a>
+          </div>
+          </div>
+        </div>
+
+        <div class="glass router-card" data-brand="mercusys">
+          <div class="router-img" style="background:linear-gradient(135deg,rgba(16,185,129,.15),rgba(6,182,212,.08))">
+            <i class="fas fa-router" style="color:var(--c4)"></i>
+          </div>
+          <div class="router-body">
+            <span class="router-brand" style="background:rgba(16,185,129,.12);color:#6ee7b7">Mercusys</span>
+            <h4>MR80X</h4>
+            <p class="router-sub">AX3000 Dual Band Gigabit WiFi 6</p>
+            <div class="router-tags">
+              <span class="r-tag"><i class="fas fa-bolt"></i>WiFi 6</span>
+              <span class="r-tag">3000 Mbps</span>
+              <span class="r-tag">Gigabit</span>
+            </div>
+             <div class="router-price">
+    <a href="https://www.startech.com.bd/mercusys-mr80x-router?srsltid=AfmBOoqsHdingEwydgysTVxW3pk-BOSwszcWeNmWAzw78Xlf1JICj5-n"
+       target="_blank">
+        🔍 Check Latest Price
+    </a>
+          </div>
+          </div>
+        </div>
+
+        <!-- Other -->
+        <div class="glass router-card" data-brand="other">
+          <div class="router-img" style="background:linear-gradient(135deg,rgba(239,68,68,.15),rgba(220,38,38,.08))">
+            <i class="fas fa-router" style="color:#f87171"></i>
+          </div>
+          <div class="router-body">
+            <span class="router-brand" style="background:rgba(239,68,68,.12);color:#fca5a5">Hikvision</span>
+            <h4>DS-3WR12C</h4>
+            <p class="router-sub">AC1200 1200Mbps Dual Band Router</p>
+            <div class="router-tags">
+              <span class="r-tag">1200 Mbps</span>
+              <span class="r-tag">Dual Band</span>
+              <span class="r-tag"><i class="fas fa-shield-alt"></i>Security</span>
+            </div>
+             <div class="router-price">
+    <a href="https://www.startech.com.bd/hikvision-ds-3wr12c-dual-band-router?srsltid=AfmBOoqUxXCL1rLCxJamfZK0YevtVdola3OBsC0XHu03c3sU-mv1GM5e"
+       target="_blank">
+        🔍 Check Latest Price
+    </a>
+          </div>
+          </div>
+        </div>
+
+        <div class="glass router-card" data-brand="other">
+          <div class="router-img" style="background:linear-gradient(135deg,rgba(245,158,11,.15),rgba(234,88,12,.08))">
+            <i class="fas fa-router" style="color:var(--c3)"></i>
+          </div>
+          <div class="router-body">
+            <span class="router-brand" style="background:rgba(245,158,11,.12);color:#fcd34d">Dahua</span>
+            <h4>DH-AX15M</h4>
+            <p class="router-sub">AX1500 Dual Band Gigabit WiFi 6</p>
+            <div class="router-tags">
+              <span class="r-tag"><i class="fas fa-bolt"></i>WiFi 6</span>
+              <span class="r-tag">1500 Mbps</span>
+              <span class="r-tag">Gigabit</span>
+            </div>
+            <div class="router-price">
+    <a href="https://www.startech.com.bd/dahua-ax15m-router?srsltid=AfmBOorsIpSpRXo06Q7Ea5whsXGrCdmNzn3YGnrlQ4Faa1HY4-0l7HIW"
+       target="_blank">
+        🔍 Check Latest Price
+    </a>
+          </div>
+          </div>
+        </div>
+
+        <div class="glass router-card" data-brand="other">
+          <div class="router-img" style="background:linear-gradient(135deg,rgba(124,58,237,.15),rgba(139,92,246,.08))">
+            <i class="fas fa-router" style="color:var(--c2)"></i>
+          </div>
+          <div class="router-body">
+            <span class="router-brand" style="background:rgba(124,58,237,.12);color:#c4b5fd">Ruijie</span>
+            <h4>RG-EW1300G</h4>
+            <p class="router-sub">1300M Dual-Band Gigabit WiFi Router</p>
+            <div class="router-tags">
+              <span class="r-tag">1300 Mbps</span>
+              <span class="r-tag">Dual Band</span>
+              <span class="r-tag">Gigabit</span>
+            </div>
+            <div class="router-price">
+    <a href="https://www.startech.com.bd/ruijie-rg-ew1300g-1300mbps-dual-band-mesh-router?srsltid=AfmBOoqkvbW1d7seZ2VICFqnuk3cqPEq5XTn3ObSZV1Rnqqi_EMzhXGq"
+       target="_blank">
+        🔍 Check Latest Price
+    </a>
+          </div>
+          </div>
+        </div>
+
+        <div class="glass router-card" data-brand="other">
+          <div class="router-img" style="background:linear-gradient(135deg,rgba(124,58,237,.15),rgba(139,92,246,.08))">
+            <i class="fas fa-router" style="color:var(--c2)"></i>
+          </div>
+          <div class="router-body">
+            <span class="router-brand" style="background:rgba(124,58,237,.12);color:#c4b5fd">Ruijie</span>
+            <h4>RG-EW300N</h4>
+            <p class="router-sub">300Mbps Smart Wi-Fi Router</p>
+            <div class="router-tags">
+              <span class="r-tag">300 Mbps</span>
+              <span class="r-tag">2.4GHz</span>
+              <span class="r-tag">Budget</span>
+            </div>
+            <div class="router-price">
+    <a href="https://www.startech.com.bd/ruijie-rg-ew300n-router?srsltid=AfmBOorm7TmvrpEzr3k4D61rWaCC4ieuCrHCpl_3XIaipOeCiqsoIhs9"
+       target="_blank">
+        🔍 Check Latest Price
+    </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ HOW IT WORKS ═══════════════ -->
+<section id="how">
+  <div class="wrapper">
+    <div class="sec-header">
+      <div class="sec-label"><i class="fas fa-map"></i> Process</div>
+      <h2 class="h1">Get Connected in 4 Easy Steps</h2>
+      <p>From application to full-speed internet — we make it seamless.</p>
+    </div>
+
+    <div class="how-grid">
+      <div class="glass step-card reveal reveal-d1">
+        <div class="step-connector"></div>
+        <i class="step-icon fas fa-phone-alt"></i>
+        <div class="step-num">01</div>
+        <h3>Contact Us</h3>
+        <p>Call, WhatsApp or fill our online form. Tell us your address and preferred speed plan.</p>
+      </div>
+      <div class="glass step-card reveal reveal-d2">
+        <div class="step-connector"></div>
+        <i class="step-icon fas fa-map-marker-alt"></i>
+        <div class="step-num">02</div>
+        <h3>Site Survey</h3>
+        <p>Our team visits your location to check coverage and plan the optimal cable route.</p>
+      </div>
+      <div class="glass step-card reveal reveal-d3">
+        <div class="step-connector"></div>
+        <i class="step-icon fas fa-tools"></i>
+        <div class="step-num">03</div>
+        <h3>Free Installation</h3>
+        <p>We install the fiber cable, ONU device and router. Full setup done by our experts.</p>
+      </div>
+      <div class="glass step-card reveal reveal-d4">
+        <i class="step-icon fas fa-bolt"></i>
+        <div class="step-num">04</div>
+        <h3>Go Online!</h3>
+        <p>Your connection is live. Enjoy blazing fast internet from day one.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ TESTIMONIALS ═══════════════ -->
+<section id="testimonials">
+  <div class="wrapper">
+    <div class="sec-header">
+      <div class="sec-label"><i class="fas fa-star"></i> Reviews</div>
+      <h2 class="h1">What Our Customers Say</h2>
+      <p>Real reviews from real customers in your neighborhood.</p>
+    </div>
+
+    <div class="testi-grid">
+
+      <div class="glass testi-card reveal reveal-d1">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">City Internet transformed my work from home experience. The speed is consistently fast and there are almost no dropouts. Best ISP in the area by far.</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:linear-gradient(135deg,var(--c),#006eff)">A</div>
+          <div class="testi-info">
+            <strong>ANISUL ISLAM</strong>
+            <span>Work From Home Professional</span>
+            <div class="testi-pkg" style="background:rgba(0,229,255,.1);border:1px solid rgba(0,229,255,.2);color:var(--c)">
+              <i class="fas fa-rocket"></i> 20 Mbps Plan
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass testi-card reveal reveal-d2">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">I've been with 3 different ISPs before City Internet. Nothing comes close. The installation was free, done in one day, and the team was very professional.</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:linear-gradient(135deg,#7c3aed,#f43f5e)">RA</div>
+          <div class="testi-info">
+            <strong>MOHAMMAD RAYHAN</strong>
+            <span>Student & Gamer</span>
+            <div class="testi-pkg" style="background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2);color:var(--c2)">
+              <i class="fas fa-bolt"></i> 80 Mbps Plan
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass testi-card reveal reveal-d3">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">Awesome 24/7 support. Had an issue at 11pm, called them and someone arrived within an hour to fix it. You can't find that level of service anywhere else.</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:linear-gradient(135deg,#10b981,#06b6d4)">RA</div>
+          <div class="testi-info">
+            <strong>RASHED</strong>
+            <span>Small Business Owner</span>
+            <div class="testi-pkg" style="background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.2);color:var(--c3)">
+              <i class="fas fa-fighter-jet"></i> 120 Mbps Plan
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass testi-card reveal reveal-d1">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">The price-to-speed ratio is unbeatable. I'm on the 20 Mbps plan and it handles video calls, YouTube and everything perfectly. Great value for money.</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">SA</div>
+          <div class="testi-info">
+            <strong>SAADIA ISLAM</strong>
+            <span>Doctor</span>
+            <div class="testi-pkg" style="background:rgba(74,144,255,.1);border:1px solid rgba(74,144,255,.2);color:#7ab8ff">
+              <i class="fas fa-wifi"></i> 20 Mbps Plan
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass testi-card reveal reveal-d2">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">Switched from cable to fiber with City Internet. The difference is night and day. Streaming 4K on multiple devices at the same time — zero buffering.</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:linear-gradient(135deg,#8b5cf6,#ec4899)">সা</div>
+          <div class="testi-info">
+            <strong>ASHRAFUL</strong>
+            <span>Content Creator</span>
+            <div class="testi-pkg" style="background:rgba(0,229,255,.1);border:1px solid rgba(0,229,255,.2);color:var(--c)">
+              <i class="fas fa-rocket"></i> 40 Mbps Plan
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass testi-card reveal reveal-d3">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">I run a small office with 10 staff. The 120 Mbps plan handles all of us perfectly. City Internet is reliable, fast and the team is very helpful. Highly recommended!</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:linear-gradient(135deg,#06b6d4,#3b82f6)">NA</div>
+          <div class="testi-info">
+            <strong>NAJMUL ALOM</strong>
+            <span>Office Manager</span>
+            <div class="testi-pkg" style="background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.2);color:var(--c3)">
+              <i class="fas fa-fighter-jet"></i> 120 Mbps Plan
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ COVERAGE ═══════════════ -->
+<section id="coverage">
+  <div class="wrapper">
+    <div class="coverage-inner">
+      <div class="glass coverage-map reveal">
+        <div class="map-visual">
+          <div class="map-rings">
+            <div class="ring"></div>
+            <div class="ring"></div>
+            <div class="ring"></div>
+            <div class="ring"></div>
+          </div>
+          <div class="map-center"><i class="fas fa-wifi"></i></div>
+          <div class="map-dot" style="top:30%;left:60%;animation:floatY 3s infinite"></div>
+          <div class="map-dot" style="top:65%;left:35%;animation:floatY 4s infinite .5s"></div>
+          <div class="map-dot" style="top:45%;left:75%;animation:floatY 3.5s infinite 1s"></div>
+          <div class="map-dot" style="top:25%;left:40%;animation:floatY 4.5s infinite 1.5s"></div>
+          <div class="map-dot" style="top:70%;left:65%;animation:floatY 3s infinite 2s"></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="sec-label"><i class="fas fa-map-marker-alt"></i> Coverage</div>
+        <h2 class="h1" style="margin:16px 0 12px">Strong Signal<br>Everywhere</h2>
+        <p class="body-lg" style="margin-bottom:32px">Our XPON fiber network covers the entire city. We're constantly expanding to reach more neighborhoods.</p>
+
+        <div class="coverage-features">
+          <div class="glass cov-feat reveal reveal-d1">
+            <i class="fas fa-network-wired" style="color:var(--c)"></i>
+            <div>
+              <h4>XPON Fiber Backbone</h4>
+              <p>Pure fiber optic cable from our servers directly to your home.</p>
+            </div>
+          </div>
+          <div class="glass cov-feat reveal reveal-d2">
+            <i class="fas fa-bolt" style="color:var(--c3)"></i>
+            <div>
+              <h4>Low Latency Network</h4>
+              <p>Sub-5ms ping times. Perfect for gaming, video calls and real-time apps.</p>
+            </div>
+          </div>
+          <div class="glass cov-feat reveal reveal-d3">
+            <i class="fas fa-expand-arrows-alt" style="color:var(--c2)"></i>
+            <div>
+              <h4>Always Expanding</h4>
+              <p>We're adding new areas every month. Contact us to check your location.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FAQ ═══════════════ -->
+<section id="faq">
+  <div class="wrapper">
+    <div class="faq-wrap">
+      <div class="faq-left reveal">
+        <div class="sec-label"><i class="fas fa-question"></i> FAQ</div>
+        <h2 class="h2" style="margin:16px 0 12px">Frequently Asked Questions</h2>
+        <p>Everything you need to know before getting connected.</p>
+        <a href="#contact" class="btn btn-glass" style="margin-top:8px">
+          <i class="fas fa-comment"></i> Still have questions?
+        </a>
+      </div>
+
+      <div class="faq-list">
+
+        <div class="glass faq-item open">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            Is installation really free?
+            <i class="fas fa-plus"></i>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              Yes! Installation is completely free for all plans. The only exception is if your location requires an unusually long cable run — in that case, we'll discuss the cable cost with you transparently before starting. No surprises.
+            </div>
+          </div>
+        </div>
+
+        <div class="glass faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            What is XPON technology?
+            <i class="fas fa-plus"></i>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              XPON is a next-generation passive optical network technology that combines EPON and GPON standards. It delivers fiber-speed internet directly to your home with extremely low latency and high reliability — far superior to old cable or DSL connections.
+            </div>
+          </div>
+        </div>
+
+        <div class="glass faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            How long does installation take?
+            <i class="fas fa-plus"></i>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              Typically 2–4 hours from arrival. Our technicians handle everything — cable routing, ONU device installation, router setup and speed testing. Most customers are online the same day they apply.
+            </div>
+          </div>
+        </div>
+
+        <div class="glass faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            Are there any data limits or fair usage policies?
+            <i class="fas fa-plus"></i>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              No data caps. All our plans are truly unlimited — you can stream, download, game and video call as much as you want without any throttling or extra charges.
+            </div>
+          </div>
+        </div>
+
+        <div class="glass faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            Do I need to buy my own router?
+            <i class="fas fa-plus"></i>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              You need an ONU device (we supply from ৳650) which connects to our fiber line. For WiFi coverage inside your home, we also supply routers from top brands like TP-Link, Cudy, Mercusys and more. We'll recommend the best option for your home size.
+            </div>
+          </div>
+        </div>
+
+        <div class="glass faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            What happens if my internet goes down?
+            <i class="fas fa-plus"></i>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              Call or WhatsApp us anytime — we're available 24/7. Our technicians aim to resolve most issues remotely within minutes, and if an on-site visit is needed, we dispatch someone as quickly as possible.
+            </div>
+          </div>
+        </div>
+
+        <div class="glass faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            Can I upgrade my plan later?
+            <i class="fas fa-plus"></i>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              Absolutely. You can upgrade (or downgrade) your plan at any time. Just contact us and we'll process the change, usually effective from your next billing cycle at no extra charge.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FINAL CTA ═══════════════ -->
+<section id="cta-section">
+  <div class="wrapper">
+    <div class="glass cta-box reveal">
+      <div class="sec-label" style="justify-content:center;display:inline-flex;margin:0 auto 20px"><i class="fas fa-bolt"></i> Limited Slots This Month</div>
+      <h2 class="h1">Ready for the Fastest<br><span class="gradient-text">Internet in Your Area?</span></h2>
+      <p>Join 300+ happy customers. Free installation. Start from ৳500/month. No contracts, no hidden fees.</p>
+      <div class="cta-actions">
+        <a href="#contact" class="btn btn-primary btn-lg">
+          <i class="fas fa-rocket"></i> Get Connected Today
+        </a>
+        <a href="#packages" class="btn btn-glass btn-lg">
+          <i class="fas fa-eye"></i> Compare Plans
+        </a>
+      </div>
+      <p class="cta-note"><i class="fas fa-check-circle"></i> Free installation &nbsp;·&nbsp; <i class="fas fa-check-circle"></i> No contract &nbsp;·&nbsp; <i class="fas fa-check-circle"></i> 24/7 support</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CONTACT ═══════════════ -->
+<section id="contact">
+  <div class="wrapper">
+    <div class="sec-header">
+      <div class="sec-label"><i class="fas fa-envelope"></i> Contact</div>
+      <h2 class="h1">Let's Get You Connected</h2>
+      <p>Fill the form and we'll call you back within 2 hours. Or reach us directly below.</p>
+    </div>
+
+    <div class="contact-wrap">
+      <div class="contact-info">
+        <div class="contact-head">
+          <h2 class="h2">Talk to Us</h2>
+          <p>Our friendly team is available from 9AM–9PM Saturday to Thursday, and 24/7 for technical emergencies.</p>
+        </div>
+
+        <div class="glass c-item">
+          <div class="c-icon" style="background:rgba(0,229,255,.12);border:1px solid rgba(0,229,255,.2);color:var(--c)">
+            <i class="fas fa-phone-alt"></i>
+          </div>
+          <div>
+    <h4>Call Us</h4>
+    <p>
+        <a href="tel:+8801843308490">+880 1712-345678</a>
+    </p>
+</div>
+        </div>
+
+        <div class="glass c-item">
+          <div class="c-icon" style="background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.2);color:var(--c4)">
+            <i class="fab fa-whatsapp"></i>
+          </div>
+          <div>
+    <h4>WhatsApp</h4>
+    <p>
+        <a href="https://wa.me/8801843308490" target="_blank">
+            +880 1712-345678
+        </a>
+    </p>
+</div>
+        </div>
+
+        <div class="glass c-item">
+          <div class="c-icon" style="background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.2);color:var(--c3)">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div>
+            <h4>Our Office</h4>
+            <p>Uttar baherchar, Keranigonj, Dhaka,  Bangladesh</p>
+          </div>
+        </div>
+
+        <div class="glass c-item">
+          <div class="c-icon" style="background:rgba(124,58,237,.12);border:1px solid rgba(124,58,237,.2);color:var(--c2)">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div>
+            <h4>Email</h4>
+            <p>info@cityinternet.com.bd</p>
+          </div>
+        </div>
+
+        <div class="glass c-item">
+          <div class="c-icon" style="background:rgba(244,63,94,.12);border:1px solid rgba(244,63,94,.2);color:var(--c5)">
+            <i class="fas fa-clock"></i>
+          </div>
+          <div>
+            <h4>Working Hours</h4>
+            <p>Sat–Fri: 9AM–9PM<br>Emergency: 24/7</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass contact-form-card reveal">
+        <h3 class="form-title">Apply for Connection</h3>
+        <p class="form-sub">We'll call you back within 2 hours during working hours.</p>
+
+        <form id="contactForm" onsubmit="submitContact(event)">
+          <div class="form-grid-2">
+            <div class="g-inp-wrap">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Your Full Name" required>
+            </div>
+            <div class="g-inp-wrap">
+              <i class="fas fa-phone"></i>
+              <input type="tel" placeholder="Phone Number" required>
+            </div>
+          </div>
+
+          <div class="g-inp-wrap">
+            <i class="fas fa-map-marker-alt"></i>
+            <input type="text" placeholder="Your Full Address" required>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="g-inp-wrap">
+              <i class="fas fa-box"></i>
+              <select>
+                <option value="">Select Plan</option>
+                <option>20 Mbps — ৳500/month</option>
+                <option>40 Mbps — ৳1000/month</option>
+                <option>80 Mbps — ৳1500/month</option>
+                <option>120 Mbps — ৳2100/month</option>
+              </select>
+            </div>
+            <div class="g-inp-wrap">
+              <i class="fas fa-network-wired"></i>
+              <select>
+                <option value="">ONU Device</option>
+                <option>DBC ONU — ৳650</option>
+                <option>VSOL ONU — ৳1050</option>
+                <option>CData ONU — ৳1100</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="g-inp-wrap textarea-wrap">
+            <i class="fas fa-comment"></i>
+            <textarea placeholder="Any message or special requirements..." rows="4"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:16px" id="submitBtn">
+            <i class="fas fa-paper-plane"></i> Send Application
+          </button>
+
+          <p style="font-size:12px;color:var(--muted);text-align:center;margin-top:12px">
+            <i class="fas fa-lock" style="color:var(--c4)"></i>
+            Your information is private and will never be shared.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer>
+  <div class="wrapper">
+    <div class="footer-grid">
+      <div class="footer-brand-col">
+        <div class="footer-logo">
+          <a href="#" class="nav-logo">
+            <div class="logo-mark"><i class="fas fa-wifi"></i></div>
+            <div class="logo-text">City <span>Internet</span></div>
+          </a>
+        </div>
+        <p>Ultra-fast XPON fiber optic internet for homes and businesses. Affordable plans, free installation, and 24/7 support you can count on.</p>
+        <div class="footer-socials">
+          <a class="social-btn" href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a class="social-btn" href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a class="social-btn" href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a class="social-btn" href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="#packages">Packages & Pricing</a></li>
+          <li><a href="#equipment">ONU Devices</a></li>
+          <li><a href="#equipment">Routers</a></li>
+          <li><a href="#how">How it Works</a></li>
+          <li><a href="#testimonials">Customer Reviews</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Our Plans</h5>
+        <ul>
+          <li><span>20 Mbps — ৳500/mo</span></li>
+          <li><span>40 Mbps — ৳1000/mo</span></li>
+          <li><span>80 Mbps — ৳1500/mo</span></li>
+          <li><span>120 Mbps — ৳2100/mo</span></li>
+          <li><span style="color:var(--c4);font-size:12px;margin-top:4px;display:block"><i class="fas fa-check"></i> Free Installation</span></li>
+          <li><span style="color:var(--c4);font-size:12px"><i class="fas fa-check"></i> Unlimited Data</span></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Equipment</h5>
+        <ul>
+          <li><span>DBC ONU — ৳650</span></li>
+          <li><span>VSOL ONU — ৳1050</span></li>
+          <li><span>CData ONU — ৳1100</span></li>
+          <li><span>TP-Link Routers</span></li>
+          <li><span>Cudy Routers</span></li>
+          <li><span>Mercusys Routers</span></li>
+          <li><a href="admin/login.html" style="color:var(--c5)"><i class="fas fa-lock"></i> Admin Panel</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2024 City Internet. All rights reserved.</div>
+      <div class="footer-badge">
+        <div class="live-dot"></div>
+        Network Online — 99.9% Uptime
+      </div>
+      <div>
+        <a href="#" style="margin-right:16px">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Sticky Mobile CTA -->
+<div class="sticky-cta">
+  <a href="tel:+880XXXXXXXXXX" class="btn btn-glass" style="flex:1;justify-content:center">
+    <i class="fas fa-phone"></i> Call Now
+  </a>
+  <a href="#contact" class="btn btn-primary" style="flex:1;justify-content:center">
+    <i class="fas fa-bolt"></i> Get Connected
+  </a>
+</div>
+
+<!-- ═══════════════ JAVASCRIPT ═══════════════ -->
+<script>
+/* ── Plan data ── */
+const plans = [
+  { speed: 20,  price: 500  },
+  { speed: 40,  price: 1000 },
+  { speed: 80,  price: 1500 },
+  { speed: 120, price: 2100 }
+];
+
+function selectPlan(i, el) {
+  document.querySelectorAll('.speed-opt').forEach(o => o.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('heroSpeed').textContent    = plans[i].speed;
+  document.getElementById('heroPriceNum').textContent = plans[i].price.toLocaleString();
+}
+
+/* ── Navbar scroll ── */
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 40) {
+    navbar.classList.add('nav-scrolled');
+  } else {
+    navbar.classList.remove('nav-scrolled');
+  }
+}, { passive: true });
+
+/* ── Mobile menu ── */
+const ham = document.getElementById('hamburger');
+const mob = document.getElementById('mobileNav');
+
+ham.addEventListener('click', () => {
+  ham.classList.toggle('open');
+  mob.classList.toggle('open');
+});
+
+function closeMob() {
+  ham.classList.remove('open');
+  mob.classList.remove('open');
+}
+
+/* ── Router filter ── */
+function filterR(brand, btn) {
+  document.querySelectorAll('.rf-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.router-card').forEach(c => {
+    const show = brand === 'all' || c.dataset.brand === brand;
+    c.style.display = show ? 'block' : 'none';
+    if (show) {
+      c.style.animation = 'none';
+      void c.offsetWidth;
+      c.style.animation = 'revealUp .4s ease forwards';
+    }
+  });
+}
+
+/* ── FAQ accordion ── */
+function toggleFaq(el) {
+  const item = el.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+
+/* ── Scroll reveal ── */
+const ro = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      ro.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -48px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+
+/* ── Counter animation ── */
+function animateCounter(el) {
+  const target = +el.dataset.target;
+  const suffix = el.dataset.suffix || '';
+  const dur = 1800;
+  const start = performance.now();
+  const isDecimal = target === 99;
+
+  function tick(now) {
+    const elapsed = now - start;
+    const progress = Math.min(elapsed / dur, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const val = isDecimal ? (eased * target).toFixed(0) : Math.floor(eased * target);
+    el.textContent = val + suffix;
+    if (progress < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+
+const co = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      animateCounter(e.target);
+      co.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('[data-target]').forEach(el => co.observe(el));
+
+/* ── Contact form ── */
+function submitContact(e) {
+  e.preventDefault();
+  const btn = document.getElementById('submitBtn');
+  btn.disabled = true;
+  btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+
+  setTimeout(() => {
+    btn.innerHTML = '<i class="fas fa-check-circle"></i> Application Sent! We\'ll call you soon.';
+    btn.style.background = 'linear-gradient(135deg,#10b981,#06b6d4)';
+    setTimeout(() => {
+      btn.disabled = false;
+      btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Application';
+      btn.style.background = '';
+      e.target.reset();
+    }, 4000);
+  }, 1200);
+}
+
+/* ── Add reveal keyframe ── */
+const style = document.createElement('style');
+style.textContent = `
+  @keyframes revealUp {
+    from { opacity:0; transform:translateY(20px); }
+    to   { opacity:1; transform:translateY(0); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity:1 !important; transform:none !important; }
+    .aurora::before { animation:none !important; }
+    .float-card, .live-dot, .ring { animation:none !important; }
+  }
+`;
+document.head.appendChild(style);
+</script>
+</body>
+</html>
